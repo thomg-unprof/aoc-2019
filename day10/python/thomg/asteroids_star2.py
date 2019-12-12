@@ -1,4 +1,5 @@
-from math import gcd, sqrt, asin, degrees
+from math import sqrt, asin, degrees
+from fractions import gcd
 import collections
 
 with open("/workspace/aoc-2019/day10/python/thomg/asteroids") as file:
@@ -44,9 +45,9 @@ for i in range(-40, 41):
     for j in range(-40, 41):
         dir_x = i
         dir_y = j
-        if gcd(i, j) != 0:
-            dir_x = i / gcd(i,j)
-            dir_y = j / gcd(i,j)
+        if abs(gcd(i, j)) != 0:
+            dir_x = i / abs(gcd(i,j))
+            dir_y = j / abs(gcd(i,j))
         dir_coords.append((int(dir_x), int(dir_y)))
 for coords in set(dir_coords):
     dirs[calcAngle(coords[0],coords[1])] = coords

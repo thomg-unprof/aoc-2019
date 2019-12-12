@@ -1,4 +1,4 @@
-from math import gcd
+from fractions import gcd
 
 with open("/workspace/aoc-2019/day10/python/thomg/asteroids") as file:
     asteroidLines = file.readlines()
@@ -27,8 +27,8 @@ def calcDirections(x, y):
             dir_x = i
             dir_y = j
             if gcd(i,j) != 0:
-                dir_x /= gcd(i, j)
-                dir_y /= gcd(i, j)
+                dir_x /= abs(gcd(i, j))
+                dir_y /= abs(gcd(i, j))
             dirList.append((int(dir_x), int(dir_y)))
     return dirList
 
