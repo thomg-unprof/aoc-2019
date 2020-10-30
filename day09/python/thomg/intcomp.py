@@ -163,16 +163,14 @@ class integerComputer:
         #print(str(self.program))
         return 0
 
-intcomp = integerComputer()
 
-# day 09
-#intcomp.reset()
-#intcomp.readProgramFile("d:\\workspace\\aoc2019\\day09\\python\\thomg\\program_day09.txt")
-#intcomp.addMemory(10000)
-#intcomp.run(1)
+
+
 
 
 ##########################################################################################
+#intcomp = integerComputer()
+
 # day02
 #intcomp.readProgramFile("d:\\workspace\\aoc2019\\day09\\python\\thomg\\program_day02.txt")
 #intcomp.run(0)
@@ -186,3 +184,9 @@ intcomp = integerComputer()
 #intcomp.run(1)
 # star 2
 #intcomp.run(5)
+
+# day 09
+#intcomp.reset()
+#intcomp.readProgramFile("d:\\workspace\\aoc2019\\day09\\python\\thomg\\program_day09.txt")
+#intcomp.addMemory(10000)
+#intcomp.run(1)
